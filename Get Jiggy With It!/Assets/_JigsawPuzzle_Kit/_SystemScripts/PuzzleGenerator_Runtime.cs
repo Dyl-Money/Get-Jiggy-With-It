@@ -113,6 +113,7 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
         filePath = PlayerPrefs.GetString("filePath", path);
         Debug.Log(filePath);
         filePath = imagePath;
+        PlayerPrefs.SetString("imagePath", imagePath);
         StartCoroutine(LoadTextureFromWeb());
     }
 

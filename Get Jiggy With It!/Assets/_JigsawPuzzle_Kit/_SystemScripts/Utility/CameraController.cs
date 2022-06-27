@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     public bool disableZooming;                     // Disable Zooming functionality
 
     [Header("Movement")]
-
+    public float panSpeed = 1;
     public Vector2 panLimits = new Vector2(10, 8);  // Camera x,y  position changing limits		
     public bool disablePanning;                     // Disable Panning functionality
 

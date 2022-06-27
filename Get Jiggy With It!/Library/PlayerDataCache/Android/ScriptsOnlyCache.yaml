@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioPause
     - CameraController
+    - Debuger
     - DontDestroy
     - GameController
     - Icon
@@ -191,6 +192,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12352}
     - Class: 114
       Script: {instanceID: 12376}
+    - Class: 114
+      Script: {instanceID: 135970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1253,7 +1256,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 13bfdd046f65628bd94aa9e52426189b
+      Hash: 584b8336704159bbce110ada7791ae54
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
@@ -1455,6 +1458,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TouchScript
     className: LayerManager
+  - hash:
+      serializedVersion: 2
+      Hash: f5d40cd05a1722eb56dd9c90598441e1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Debuger
   platform: 13
   scenePathNames:
   - Assets/Scenes/1/MainMenu.unity
