@@ -803,7 +803,7 @@ public class PuzzleController : MonoBehaviour
             // Change camera view size according to size of (puzzle + decompose areas)
             if (_camera.orthographic  &&  changeCameraSize)
                 _camera.orthographicSize = Mathf.Ceil((puzzleBounds.size.x + (horizontalAreasSize.x + horizontalAreaOffset.x)*2)/4) + _cameraSizeTuner;
-
+                _camera.orthographicSize = 8;
         }
         else
             Debug.Log("Please ensure that <i>_camera</i> exists", gameObject);

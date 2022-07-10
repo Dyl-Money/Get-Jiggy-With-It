@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/2/NeverUnload.unity
+    guid: aa3738bed3fbf8b41906e9411e97cd1c
+  - enabled: 0
+    path: Assets/Scenes/2/Game.unity
+    guid: f2a19a9a878d3944dad72daab3289f7a
+  - enabled: 1
+    path: Assets/Scenes/1/MainMenu.unity
+    guid: 283fa5ce653ecf24397bf46a86f69dad
+  - enabled: 1
+    path: Assets/Scenes/1/GameScreen2.unity
+    guid: 18c6c5ba431ab6f418212b1f7a058de6
+  - enabled: 0
+    path: Assets/Scenes/1/GameScreen.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/My stuff/SceneS/1/GameScreen.unity
+    guid: d776a0ea6157d304cbd9d5aa610fa0c5
+  - enabled: 0
+    path: Assets/_JigsawPuzzle_Kit/Puzzle_Classic_Smooth.unity
+    guid: 9412e29dd593d4b5bb64785b100ee8f1
+  - enabled: 0
+    path: Assets/Scenes/1/MainMenu2.unity
+    guid: 7c72ce80db1d38641a76a11ba43b0afb
+  - enabled: 0
+    path: Assets/Scenes/1/GameScreen3.unity
+    guid: 5daa72df0338ce94186e6089680912e1
+  - enabled: 0
+    path: Assets/TouchScript/Examples/Colors/Colors.unity
+    guid: c56b29ea5ec5a4713b65552d4a8bd9ac
+  m_configObjects: {}

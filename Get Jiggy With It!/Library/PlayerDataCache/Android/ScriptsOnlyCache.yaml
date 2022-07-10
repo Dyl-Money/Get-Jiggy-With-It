@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioPause
     - CameraController
-    - Debuger
     - DontDestroy
     - GameController
     - Icon
@@ -32,6 +31,7 @@ ScriptsOnlyBuild:
     - TouchScript.Gestures.TransformGestures.TransformGesture
     - TouchScript.InputSources.StandardInput
     - TouchScript.Layers.FullscreenLayer
+    - TouchScript.Layers.StandardLayer
     - TouchScript.TouchManager
     - ZoomBounds
     Unity.2D.Tilemap.Editor.dll:
@@ -42,7 +42,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
@@ -64,7 +63,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/1/GameScreen2.unity:
@@ -120,6 +118,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10346}
     - Class: 114
       Script: {instanceID: 10396}
+    - Class: 114
+      Script: {instanceID: 10426}
     - Class: 114
       Script: {instanceID: 10530}
     - Class: 114
@@ -192,8 +192,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12352}
     - Class: 114
       Script: {instanceID: 12376}
-    - Class: 114
-      Script: {instanceID: 135970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -854,7 +852,7 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 077b3344c7ba6ec8e33dd4c630991c26
+      Hash: f15b6f585b0ea23667d2974bcc36d2b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleGenerator_Runtime
@@ -1256,7 +1254,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 584b8336704159bbce110ada7791ae54
+      Hash: 13bfdd046f65628bd94aa9e52426189b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
@@ -1458,12 +1456,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TouchScript
     className: LayerManager
-  - hash:
-      serializedVersion: 2
-      Hash: f5d40cd05a1722eb56dd9c90598441e1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Debuger
   platform: 13
   scenePathNames:
   - Assets/Scenes/1/MainMenu.unity

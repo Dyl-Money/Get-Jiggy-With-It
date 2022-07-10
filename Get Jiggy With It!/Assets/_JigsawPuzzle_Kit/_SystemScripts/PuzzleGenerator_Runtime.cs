@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using SimpleFileBrowser;
+using TouchScript.Gestures;
+using TouchScript.Gestures.TransformGestures;
+using TouchScript.Behaviors;
 
 [AddComponentMenu("Scripts/Jigsaw Puzzle/Runtime Puzzle Generator")]
 public class PuzzleGenerator_Runtime: MonoBehaviour
@@ -52,6 +55,8 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
     FileBrowser gms;
 
     string filePath;
+
+    public GameObject fileBrowse;
 
     //============================================================================================================================================================
     void Start()
@@ -113,7 +118,6 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
         filePath = PlayerPrefs.GetString("filePath", path);
         Debug.Log(filePath);
         filePath = imagePath;
-        PlayerPrefs.SetString("imagePath", imagePath);
         StartCoroutine(LoadTextureFromWeb());
     }
 
@@ -151,9 +155,12 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 		GameObject shadow;
 		SpriteRenderer spriteRenderer;
 		SpriteRenderer shadowRenderer;
+        TransformGesture transGest;
+        Transformer transform;
+        Rigidbody2D rigid;
+        PolygonCollider2D col;
 
-
-		puzzle.name = "Puzzle_" + image.name + "_" + cols.ToString() + "x" + rows.ToString();
+        puzzle.name = "Puzzle_" + image.name + "_" + cols.ToString() + "x" + rows.ToString();
 
 		// Go through array and create gameObjects
 		for (int y = 0; y < rows; y++) 
@@ -167,10 +174,27 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 
                 spriteRenderer = piece.AddComponent<SpriteRenderer>() as SpriteRenderer;
                 spriteRenderer.sprite = Sprite.Create(puzzleGrid[y * cols + x].texture, new Rect(0, 0, puzzleGrid[y * cols + x].texture.width, puzzleGrid[y * cols + x].texture.height), puzzleGrid[y * cols + x].pivot, pixelsPerUnit);
-               
 
-				// Generate shadow as darkened copy of originalsprite
-				if (useShadows)
+                transGest = piece.AddComponent<TransformGesture>();
+                transGest.Type = TransformGesture.TransformType.Translation;
+                transGest.Projection = TransformGesture.ProjectionType.Layer;
+
+                transform = piece.AddComponent<Transformer>();
+
+                piece.AddComponent<PolygonCollider2D>();
+                col = piece.AddComponent<PolygonCollider2D>();
+                col.isTrigger = true;
+
+                rigid = piece.AddComponent<Rigidbody2D>();
+                rigid.bodyType = RigidbodyType2D.Kinematic;
+
+                int Puzzle = LayerMask.NameToLayer("Puzzle");
+                piece.layer = Puzzle;
+
+                Destroy(fileBrowse);
+
+                // Generate shadow as darkened copy of originalsprite
+                if (useShadows)
 				{
 					shadow = Instantiate(piece);
 					shadow.transform.parent = piece.transform;

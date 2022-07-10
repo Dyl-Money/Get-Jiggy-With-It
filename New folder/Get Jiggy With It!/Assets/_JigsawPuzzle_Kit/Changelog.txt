@@ -1,0 +1,94 @@
+Version v 3.70 (CURRENT)
+- ADDED: Ability to change puzzle position without moving decomposition areas
+- ADDED: Ability to setup(during generation) custom Material for assembled pieces 
+- IMPROVED: Lighten/speedup the puzzle preparation at game Start
+- IMPROVED: Puzzle bounds calculation
+- IMPROVED: SimpleDialog paused game mode 
+- IMPROVED: Hint UI behavior
+- IMPROVED: Debug messages
+- FIXED: Possible path-related issue in Import script if (localDirectory == "") return;
+- FIXED: Issue with puzzle bounds calculation when pieces have been reordered in Hierarchy
+- OTHER: A lot of minor fixes and improvements
+
+
+Version 3.36 
+- FIXED: Input processing on Microsoft UWP
+- FIXED: Timer issues
+- FIXED: Camera moves outside limits during double-click zooming
+- FIXED: Issues with "Process fully in 3D"
+- IMPROVED: Max atlas size increased to 8192px
+- IMPROVED: Add and assign Tags to main objects (puzzle, background). 
+- ADDED: Option to automatically assign puzzle/background to GameController by Tags.
+
+Version 3.2
+- ADDED: Ability to align camera size with background size
+- ADDED: Simple bevel around puzzle pieces. 
+- IMPROVED: Generated background is automatically adjusted to puzzle now
+- IMPROVED: There're different sizes for decomposition areas now
+- FIXED: Wrong dragged/dropped pieces ordering
+- FIXED: Camera jumping when piece is dragged over UI
+- OTHER: Minor fixes and improvements
+
+Version 3.0 
+- ADDED: "Rotation only" decomposition
+- ADDED: Ability to generate puzzle from external image (including online)
+- ADDED: Ability to align puzzle/background with camera center (Function AlignWithCameraCenter in PuzzleController)
+- ADDED: Background auto generation from the source image 
+- ADDED: Reset puzzle progress function (Function ResetProgress in PuzzleController)
+- ADDED: ReturnCamera function to CameraController
+- ADDED: Ability to scale source image to have change size of pieces textures (for runtime generation)
+- IMPROVED: Better pieces rotation on mobile
+- IMPROVED: Camera control 
+- IMPROVED: Better multi-puzzle scene handling (Function Switch() in ChoosePuzzleFromList)
+- IMPROVED: Less pieces flickering
+- IMPROVED: Always grab a piece on top
+- FIXED: Generation from different Source/Atlas sizes ratio
+- FIXED: Generation from images with transparency (possible now)
+- OTHER: A lot of minor fixes and improvements
+
+Version 2.95
+- IMPROVED: Speedup Generation a lot
+- FIXED: Visual artefacts
+- ADDED: (TextureUtilities) functions to Save/Load PNG   
+- ADDED: (TextureUtilities) Color[] versions of some functions
+- Other minor fixes and improvements
+
+Version 2.7
+- Added: Shuffle puzzle function - remix/return unassembled pieces into decomposition areas
+- Improved: Cursor is confined within game window now (free when Paused)
+- Fixed: Decomposition areas preview displayed properly now
+- Fixed: Puzzle pieces below UI will not be grabbed accidentally
+- Fixed: During decomposition pieces are more precisely fit into related areas
+- Fixed: Pieces will not be picked when finger/mouse dragged
+
+Version 2.55
+- Better 3D-puzzles processing
+
+Version 2.5
+- Pieces grouping (freely and in any number of groups)
+- Full save for positions/rotations, groups
+- Fixes and refactoring
+
+Version 2.12
+- Minor fixes
+
+Version 2.1
+- Speedup puzzle generation 
+- Minor fixes
+
+Version 2.0
+- Fully migrated to C#
+- Inverted rules (+ manual decomposing) functionality
+- Simple dialog to new UI, pause, skip, BG, etc
+- A lot of fixes and minor improvements
+
+
+Version 1.8
+- Included C# version
+- Added ability to generate puzzles runtime!
+- Script to choose puzzle from the list
+- Improved CameraController
+- Minor improvements and bugfixes
+
+Version 1.1
+- Minor improvements and  bugfixes
