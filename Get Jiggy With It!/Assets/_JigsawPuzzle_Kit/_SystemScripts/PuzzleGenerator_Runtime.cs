@@ -58,6 +58,8 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 
     public GameObject fileBrowse;
 
+    public TransformGesture transGest;
+
     //============================================================================================================================================================
     void Start()
     {
@@ -116,7 +118,7 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
         image = new Texture2D(1, 1);
         //path = imagePath;
         filePath = PlayerPrefs.GetString("filePath", path);
-        Debug.Log(filePath);
+        //Debug.Log(filePath);
         filePath = imagePath;
         StartCoroutine(LoadTextureFromWeb());
     }
@@ -155,7 +157,6 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 		GameObject shadow;
 		SpriteRenderer spriteRenderer;
 		SpriteRenderer shadowRenderer;
-        TransformGesture transGest;
         Transformer transform;
         Rigidbody2D rigid;
         PolygonCollider2D col;
@@ -171,9 +172,13 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 				piece.name = "piece_" + x.ToString() + "x" + y.ToString();
                 piece.transform.SetParent(puzzle.transform);
                 piece.transform.position = new Vector3(x * spriteBaseSize.x, -y * spriteBaseSize.y, 0);
+                //piece.tag = piece.name;
 
                 spriteRenderer = piece.AddComponent<SpriteRenderer>() as SpriteRenderer;
                 spriteRenderer.sprite = Sprite.Create(puzzleGrid[y * cols + x].texture, new Rect(0, 0, puzzleGrid[y * cols + x].texture.width, puzzleGrid[y * cols + x].texture.height), puzzleGrid[y * cols + x].pivot, pixelsPerUnit);
+
+                //piece.AddComponent<PressGesture>();
+                //piece.AddComponent<ReleaseGesture>();
 
                 transGest = piece.AddComponent<TransformGesture>();
                 transGest.Type = TransformGesture.TransformType.Translation;
@@ -190,6 +195,8 @@ public class PuzzleGenerator_Runtime: MonoBehaviour
 
                 int Puzzle = LayerMask.NameToLayer("Puzzle");
                 piece.layer = Puzzle;
+
+                piece.AddComponent<PlacedBool>();
 
                 Destroy(fileBrowse);
 

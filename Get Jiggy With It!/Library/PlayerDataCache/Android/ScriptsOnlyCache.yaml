@@ -3,12 +3,14 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioPause
     - CameraController
+    - Debuger
     - DontDestroy
     - GameController
     - Icon
     - PanZoom
     - Parallax
     - PauseMenu
+    - PuzzleController
     - PuzzleGenerator_Runtime
     - RuntimeGeneration
     - SceneSwitcher
@@ -42,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
@@ -63,6 +66,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/1/GameScreen2.unity:
@@ -121,6 +125,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10426}
     - Class: 114
+      Script: {instanceID: 10450}
+    - Class: 114
       Script: {instanceID: 10530}
     - Class: 114
       Script: {instanceID: 10550}
@@ -137,61 +143,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10912}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11798}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11808}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11874}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12230}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 12232}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12252}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12288}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12336}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12354}
+    - Class: 114
+      Script: {instanceID: 12378}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -286,51 +294,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11608}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11798}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11808}
+      Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12230}
+      Script: {instanceID: 12232}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 12252}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12288}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 12336}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -690,7 +698,7 @@ ScriptsOnlyBuild:
     className: StandardLayer
   - hash:
       serializedVersion: 2
-      Hash: dda0592ea002c2d664060f94566551dc
+      Hash: ece6dcd906833b0354aaca268726e817
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleController
@@ -852,7 +860,7 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
-      Hash: f15b6f585b0ea23667d2974bcc36d2b5
+      Hash: d7883e39255a6d5d1a21f83154e9346a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleGenerator_Runtime
@@ -868,6 +876,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
+  - hash:
+      serializedVersion: 2
+      Hash: b80247a2faa2f1a8d28e456f77760636
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Debuger
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -1456,6 +1470,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TouchScript
     className: LayerManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5a94529425d27160eeaf2c4c0cc6cf15
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlacedBool
   platform: 13
   scenePathNames:
   - Assets/Scenes/1/MainMenu.unity

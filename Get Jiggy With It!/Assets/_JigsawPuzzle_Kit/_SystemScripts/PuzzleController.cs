@@ -4,7 +4,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TouchScript;
+using TouchScript.Gestures;
+using TouchScript.Gestures.TransformGestures;
+using TouchScript.Behaviors;
 
 // List of basic puzzle state to process
 public enum PuzzleState {None, DragPiece, ReturnPiece, DropPiece, RotatePiece, PuzzleAssembled}
@@ -17,7 +20,7 @@ public class PuzzleController : MonoBehaviour
 	public bool enablePositionSaving = true;
 
 	// Use pieces grouping (please don't use for imported and 3D puzzles)
-	public bool enablePiecesGroups = true;
+	public bool enablePiecesGroups = false;
 
 	// Should pieces be rotated during decomposition
 	public bool randomizeRotation = false;
@@ -52,7 +55,7 @@ public class PuzzleController : MonoBehaviour
     public float mobileDragOffsetY = 0.5f;
 
     // Allowed position/rotation offset to consider piece placed to it origin
-    public float allowedDistance = 0.5f;
+    public float allowedDistance = 0.1f;
     public float allowedRotation = 10;
 
     // Change transparency for assembled pieces
@@ -79,9 +82,30 @@ public class PuzzleController : MonoBehaviour
     int currentPiece = -1;
     Transform currentObjectTransform;
     PuzzlePieceGroup currentGroup = null;
-    GameObject currentObject;      
+    public GameObject currentObject;
 
+    PuzzleGenerator_Runtime puz;
 
+    //public Vector3 _pointerPosition;
+
+    public bool placed = false;
+
+    private void Update()
+    {
+        //Debug.Log(placed);
+        //Debug.Log(currentObject.name);
+        //Debug.Log(currentObject.GetComponent<PlacedBool>().placed);
+        //Debug.Log(Input.touchCount);
+        //Debug.Log(_pointerPosition.x);
+        //Debug.Log(_pointerPosition.y);
+        //PlayerPrefs.SetInt("touchCount", Input.touchCount);
+
+        //if (currentObject == true)
+        //{
+        //placed = true;
+        //}
+        placed = currentObject.GetComponent<PlacedBool>().placed;
+    }
 
     //===================================================================================================== 
     // Prepare puzzle for game
@@ -146,7 +170,7 @@ public class PuzzleController : MonoBehaviour
         if (_dragInput  &&  currentPiece < 0) 
         {
             _pointerPosition.z = 0;
-            currentPiece = GetPointedPieceId(_pointerPosition, true);
+            currentPiece = GetPointedPieceId(_pointerPosition, true);//this4
 
             if (currentPiece >= 0) 
             {
@@ -218,12 +242,12 @@ public class PuzzleController : MonoBehaviour
 
 
 
-            // Drop piece and assemble it to puzzle (if it close enough to it initial position/rotation)    
-            if (!_dragInput) 
-            {   
-                currentObjectTransform.localRotation = new Quaternion(0, 0, currentObjectTransform.localRotation.z, currentObjectTransform.localRotation.w); //Removes the tilt effect
-                if (!changeOnlyRotation)
-                currentObjectTransform.position = new Vector3 (currentObjectTransform.position.x, currentObjectTransform.position.y, currentObjectTransform.position.z + dragOffsetZ);
+        // Drop piece and assemble it to puzzle (if it close enough to it initial position/rotation)    
+        if (!_dragInput)
+        {
+            currentObjectTransform.localRotation = new Quaternion(0, 0, currentObjectTransform.localRotation.z, currentObjectTransform.localRotation.w); //Removes the tilt effect
+            if (!changeOnlyRotation)
+                currentObjectTransform.position = new Vector3(currentObjectTransform.position.x, currentObjectTransform.position.y, currentObjectTransform.position.z + dragOffsetZ);
 
                 // Process groups if needed
                 if (enablePiecesGroups) 
@@ -291,9 +315,22 @@ public class PuzzleController : MonoBehaviour
                         if (invertedRules) 
                             movedPieces.Remove(currentPiece); 
                         else
-                            ReturnPiece(currentPiece, movementTime);
+                            ReturnPiece(currentPiece, movementTime);//this
+                            if (placed == false)
+                            {
+                        //if (Input.GetMouseButtonUp(0))
+                            if (Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary || Input.GetTouch(0).phase == TouchPhase.Canceled)
+                                {
+                                //currentObject.transGest.enabled = false;
+                                placed = currentObject.GetComponent<PlacedBool>().placed;
+                                currentObject.GetComponent<TransformGesture>().enabled = false;
+                                currentObject.GetComponent<PolygonCollider2D>().enabled = false;
+                                //currentObject.GetComponent<Rigidbody2D>().enabled = false;
+                                currentObject.GetComponent<PlacedBool>().placed = true;
+                                }
+                            }
 
-                        state = PuzzleState.ReturnPiece;
+                    state = PuzzleState.ReturnPiece;
                     }
                     else // Just drop it
                         state = PuzzleState.DropPiece;
@@ -541,7 +578,7 @@ public class PuzzleController : MonoBehaviour
 		} 
 		else 
 			if (!movedPieces.Contains(_id))
-                movedPieces.Add (_id);					
+                movedPieces.Add (_id);		//this3			
 		
 	}
 
@@ -566,7 +603,7 @@ public class PuzzleController : MonoBehaviour
 			pieces [_id].transform.localRotation = pieces [_id].startRotation;
 
 
-        MovePiece (_id, pieces [_id].startPosition, true, _movementTime);
+        MovePiece (_id, pieces [_id].startPosition, true, _movementTime);//this2
 	}
 
 	//----------------------------------------------------------------------------------------------------

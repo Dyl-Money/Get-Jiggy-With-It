@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using TouchScript;
+
 
 
 [AddComponentMenu("Scripts/Jigsaw Puzzle/Game Controller")]
@@ -155,10 +157,18 @@ public class GameController : MonoBehaviour
 		{
 			// Process puzzle and react on it state
             switch (puzzle.ProcessPuzzle (
+                                            //GetPointerPosition(gameCamera),
+                                            //Input.GetMouseButton(0)  &&  (!cameraScript || !cameraScript.IsCameraMoved())  &&  ((puzzle.GetCurrentPiece()==null && !EventSystem.current.IsPointerOverGameObject())  ||  puzzle.GetCurrentPiece() != null),
+                                            //GetRotationDirection()
+
+                                            //GetPointerPosition(gameCamera),
+                                            //Input.GetMouseButtonDown(0) && (!cameraScript || !cameraScript.IsCameraMoved()) && ((puzzle.GetCurrentPiece() == null && !EventSystem.current.IsPointerOverGameObject()) || puzzle.GetCurrentPiece() != null),
+                                            //GetRotationDirection()
+
                                             GetPointerPosition(gameCamera),
-                                            Input.GetMouseButton(0)  &&  (!cameraScript || !cameraScript.IsCameraMoved())  &&  ((puzzle.GetCurrentPiece()==null && !EventSystem.current.IsPointerOverGameObject())  ||  puzzle.GetCurrentPiece() != null),
+                                            Input.GetTouch(0).phase == TouchPhase.Moved && (!cameraScript || !cameraScript.IsCameraMoved()) && ((puzzle.GetCurrentPiece() == null && !EventSystem.current.IsPointerOverGameObject()) || puzzle.GetCurrentPiece() != null),
                                             GetRotationDirection()
-                                          ) )
+                                          ) )//this
 			{
 				case PuzzleState.None:
 					;

@@ -62,7 +62,7 @@ public class RuntimeGeneration : MonoBehaviour
         if (!image)
         {
             filePath = PlayerPrefs.GetString("filePath", path);
-            Debug.Log(filePath);
+            //Debug.Log(filePath);
             puzzleGenerator.CreateFromExternalImage(filePath);
 
             //puzzleGenerator.CreateFromExternalImage(pathToImage);
