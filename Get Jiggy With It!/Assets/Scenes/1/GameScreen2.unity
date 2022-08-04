@@ -1020,50 +1020,6 @@ MonoBehaviour:
   state: 0
   currentObject: {fileID: 0}
   placed: 0
---- !u!114 &1463300110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463300088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8f02f30defc584fac873806b96f0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enablePositionSaving: 1
-  enablePiecesGroups: 1
-  randomizeRotation: 0
-  changeOnlyRotation: 0
-  fullyIn3D: 0
-  decomposeToLeft: 1
-  decomposeToRight: 1
-  decomposeToTop: 0
-  decomposeToBottom: 0
-  horizontalAreasSize: {x: 5, y: 5, z: 5}
-  autoHorizontalAreaOffset: 1
-  horizontalAreaOffset: {x: 1, y: 0, z: 1}
-  verticalAreasSize: {x: 5, y: 5, z: 5}
-  autoVerticalAreaOffset: 1
-  verticalAreaOffset: {x: 0, y: 1, z: 1}
-  movementTime: 0.1
-  rotationSpeed: 100
-  dragOffsetZ: 2
-  dragTiltSpeed: 2
-  mobileDragOffsetY: 0.5
-  allowedDistance: 0.5
-  allowedRotation: 10
-  invertedRules: 0
-  pieces: []
-  puzzleBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  pieceMaterial_assembled: {fileID: 0}
-  thisTransform: {fileID: 1463300091}
-  state: 0
-  currentObject: {fileID: 0}
-  placed: 0
 --- !u!114 &1522553755 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 680997592068656924, guid: 0fc12c379ae73c547835503e6e8b950a,
@@ -1675,6 +1631,16 @@ PrefabInstance:
       propertyPath: m_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 680997593118725730, guid: 0fc12c379ae73c547835503e6e8b950a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680997592894304962, guid: 0fc12c379ae73c547835503e6e8b950a,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fc12c379ae73c547835503e6e8b950a, type: 3}
 --- !u!1001 &4751274179609441606
@@ -1692,7 +1658,7 @@ PrefabInstance:
     - target: {fileID: 4750285163007936218, guid: 802b39866d1aa374da612fd08c7cb029,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4824521105106367870, guid: 802b39866d1aa374da612fd08c7cb029,
         type: 3}
