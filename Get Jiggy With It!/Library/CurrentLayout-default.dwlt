@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 146
+  controlID: 31
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,8 +135,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 76
+  controlID: 32
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 222}
   m_MaxSize: {x: 8008, y: 4022}
   vertical: 0
-  controlID: 77
+  controlID: 33
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 706
     height: 646
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -409,9 +409,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8720000
-      m_LastClickedID: 29400
-      m_ExpandedIDs: 54e8ffffcce8fffffce8fffffee8ffff4ae9ffffdee9ffff56eaffff86eaffff88eaffffd4eaffff7eeeffff28efffffa0efffffd0efffff02f1ffff56f1ffffb0f3ffff28f4ffff58f4ffff8ef5ffffe2f5ffff00faffff74faffff68fbffff
+      m_SelectedIDs: f6370000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 30efffffaeefffffe4efffffe6efffff32f0ffff3cf1ffffbaf1fffff0f1fffff2f1ffff3ef2ffffd6f2ffff52f3ffff86f3ffffb4f4ffff04f5ffff2efbffffc0630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -504,11 +504,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.14893177, y: -0.21846882, z: 0.033758253, w: -0.9638209}
     speed: 2
-    m_Value: {x: -0.1489318, y: -0.21846886, z: 0.03375826, w: -0.9638211}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 635.7143
+    m_Target: 809.7488
     speed: 2
-    m_Value: 635.7143
+    m_Value: 847.9045
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -625,11 +625,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/My stuff/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/My stuff/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dylan\Documents\GitHub\Get-Jiggy-With-It\Get Jiggy With
     It!
@@ -637,9 +637,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 20310000
-    m_LastClickedID: 12576
-    m_ExpandedIDs: 0000000020310000383100006e310000d23100004832000096320000d43200001e3300007a330000d034000002350000fa3500000e37000066390000c8390000143a00007a3d000000ca9a3b
+    m_SelectedIDs: 6a320000
+    m_LastClickedID: 12906
+    m_ExpandedIDs: 0000000030310000483100007e310000e231000058320000a6320000e43200002e3300008a330000e0340000123500000a3600001e37000076390000d8390000243a00001843000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,7 +667,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000020310000383100006e310000d23100004832000096320000d43200001e3300007a330000d034000002350000fa3500000e37000066390000c8390000143a00007a3d0000
+    m_ExpandedIDs: 0000000030310000483100007e310000e231000058320000a6320000e43200002e3300008a330000e0340000123500000a3600001e37000076390000d8390000243a000018430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

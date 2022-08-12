@@ -44,7 +44,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
@@ -66,7 +65,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/1/GameScreen2.unity:
@@ -1480,4 +1478,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/1/MainMenu.unity
   - Assets/Scenes/1/GameScreen2.unity
-  playerPath: C:/Users/dylan/Documents/jig (1)/jiggy2.apk
+  playerPath: C:/Users/dylan/Documents/GitHub/Get-Jiggy-With-It/Get Jiggy With It!/Get
+    Jiggy With It! App/Get Jiggy With It!.apk
